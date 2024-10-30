@@ -1,5 +1,6 @@
 .banner img {
-  height: 400px;
+  height: 250px;
+  width: 100%;
   object-fit: cover;
 }
 
@@ -8,43 +9,84 @@
   object-fit: cover;
 }
 
-.shifting-banner {
-  height: 0;
-  transition: height 2s ease;
-  max-height: 800px;
-}
+// <!-- Without Optimized CSS -->
+// .shifting-banner {
+//   height: 0;
+//   transition: height 2s ease;
+//   max-height: 800px;
+// }
 
-.shifting-banner {
-  animation: expandBanner 2s forwards 1s;
-}
+// .shifting-banner {
+//   animation: expandBanner 2s forwards 1s;
+// }
 
-@keyframes expandBanner {
-  to {
-    height: 800px;
+// @keyframes expandBanner {
+//   to {
+//     height: 800px;
+//   }
+// }
+
+// .shifting-img {
+//   width: 100%;
+//   height: 0;
+//   transition: height 1.5s ease;
+//   animation: expandImage 2s forwards 1.5s;
+// }
+
+// @keyframes expandImage {
+//   to {
+//     height: 400px;
+//   }
+// }
+
+// .shifting-card {
+//   padding: 0;
+//   transition: padding 1s ease;
+//   animation: addPadding 1s forwards 2s;
+// }
+
+// @keyframes addPadding {
+//   to {
+//     padding: 15px;
+//   }
+// }
+
+// Skeleton CSS
+/* Skeleton shimmer effect */
+@keyframes shimmer {
+  0% {
+    background-position: -100px;
+  }
+
+  100% {
+    background-position: 100px;
   }
 }
 
-.shifting-img {
-  width: 100%;
-  height: 0;
-  transition: height 1.5s ease;
-  animation: expandImage 2s forwards 1.5s;
+.skeleton-card {
+  background-color: #f0f0f0;
+  border-radius: 4px;
+  overflow: hidden;
 }
 
-@keyframes expandImage {
-  to {
-    height: 400px;
-  }
+.skeleton-img,
+.skeleton-text {
+  background: linear-gradient(90deg,
+      rgba(255, 255, 255, 0) 25%,
+      rgba(255, 255, 255, 0.3) 50%,
+      rgba(255, 255, 255, 0) 75%);
+  background-size: 200% 100%;
+  animation: shimmer 1.5s infinite linear;
 }
 
-.shifting-card {
-  padding: 0;
-  transition: padding 1s ease;
-  animation: addPadding 1s forwards 2s;
+.skeleton-img {
+  height: 200px;
+  object-fit: cover;
 }
 
-@keyframes addPadding {
-  to {
-    padding: 15px;
-  }
+.skeleton-text {
+  height: 20px;
+  margin-top: 16px;
+  width: 80%;
+  border-radius: 4px;
 }

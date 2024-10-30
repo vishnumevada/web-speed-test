@@ -10,19 +10,32 @@ import { NgFor } from '@angular/common';
   styleUrl: './app.component.scss',
 })
 export class AppComponent {
-  title = 'web-app-speed-test';
+  placeholders = Array(8);
+  images1: any;
+
   images = [
-    { src: '/images/1.png', alt: 'Image 1', caption: 'Caption 1' },
-    { src: '/images/2.png', alt: 'Image 2', caption: 'Caption 2' },
-    { src: '/images/3.png', alt: 'Image 3', caption: 'Caption 3' },
-    { src: '/images/4.png', alt: 'Image 4', caption: 'Caption 4' },
-    { src: '/images/5.png', alt: 'Image 5', caption: 'Caption 5' },
-    { src: '/images/6.png', alt: 'Image 6', caption: 'Caption 6' },
-    { src: '/images/7.png', alt: 'Image 7', caption: 'Caption 7' },
-    { src: '/images/8.png', alt: 'Image 8', caption: 'Caption 8' },
-    { src: '/images/9.png', alt: 'Image 9', caption: 'Caption 9' },
-    { src: '/images/10.png', alt: 'Image 10', caption: 'Caption 10' },
-    { src: '/images/1.png', alt: 'Image 11', caption: 'Caption 11' },
-    { src: '/images/2.png', alt: 'Image 12', caption: 'Caption 12' },
+    { id: 1, src: '/images/1.png', alt: 'Image 1', caption: 'Caption 1' },
+    { id: 2, src: '/images/2.png', alt: 'Image 2', caption: 'Caption 2' },
+    { id: 3, src: '/images/3.png', alt: 'Image 3', caption: 'Caption 3' },
+    { id: 4, src: '/images/4.png', alt: 'Image 4', caption: 'Caption 4' },
+    { id: 5, src: '/images/5.png', alt: 'Image 5', caption: 'Caption 5' },
+    { id: 6, src: '/images/6.png', alt: 'Image 6', caption: 'Caption 6' },
+    { id: 7, src: '/images/7.png', alt: 'Image 7', caption: 'Caption 7' },
+    { id: 8, src: '/images/8.png', alt: 'Image 8', caption: 'Caption 8' },
   ];
+
+  constructor() {
+    setTimeout(() => {
+      this.images1 = [
+        { id: 1, src: '/images/1.avif', alt: 'Image 1', caption: 'Caption 1' },
+        { id: 2, src: '/images/2.avif', alt: 'Image 2', caption: 'Caption 2' },
+        { id: 3, src: '/images/3.avif', alt: 'Image 3', caption: 'Caption 3' },
+        { id: 4, src: '/images/4.avif', alt: 'Image 4', caption: 'Caption 4' },
+        { id: 5, src: '/images/5.avif', alt: 'Image 5', caption: 'Caption 5' },
+        { id: 6, src: '/images/6.avif', alt: 'Image 6', caption: 'Caption 6' },
+        { id: 7, src: '/images/7.avif', alt: 'Image 7', caption: 'Caption 7' },
+        { id: 8, src: '/images/8.avif', alt: 'Image 8', caption: 'Caption 8' },
+      ];
+    }, 500);
+  }
 }
