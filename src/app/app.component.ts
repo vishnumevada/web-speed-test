@@ -31,7 +31,11 @@ export class AppComponent implements OnInit {
     this.title.setTitle('Dynamic Page Title');
     this.meta.updateTag({
       name: 'description',
-      content: 'Dynamic page description',
+      content: 'A brief and engaging description of your website content.',
+    });
+    this.meta.updateTag({
+      name: 'keywords',
+      content: 'keyword1, keyword2, keyword3, etc.',
     });
     this.meta.updateTag({
       property: 'og:title',
