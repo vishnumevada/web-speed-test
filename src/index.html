@@ -1,5 +1,6 @@
 <!doctype html>
 <html lang="en">
+
 <head>
   <meta charset="utf-8">
   <title>WebAppSpeedTest</title>
@@ -7,7 +8,21 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="icon" type="image/x-icon" href="favicon.ico">
 </head>
+
 <body>
   <app-root></app-root>
+
+  <!-- Blocking script added for TBT testing -->
+  <script>
+    function blockMainThread(duration) {
+      const start = Date.now();
+      while (Date.now() - start < duration) {
+        // Busy loop to block the main thread
+      }
+    }
+    // Increase Total Blocking Time by blocking for 3 seconds (3000 ms)
+    blockMainThread(1000);
+  </script>
 </body>
+
 </html>
