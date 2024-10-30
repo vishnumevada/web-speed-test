@@ -28,19 +28,19 @@ export class AppComponent implements OnInit {
   constructor(private meta: Meta, private title: Title) {}
 
   ngOnInit(): void {
-    this.title.setTitle('Dynamic Page Title');
-    this.meta.updateTag({
-      name: 'description',
-      content: 'A brief and engaging description of your website content.',
-    });
-    this.meta.updateTag({
-      name: 'keywords',
-      content: 'keyword1, keyword2, keyword3, etc.',
-    });
-    this.meta.updateTag({
-      property: 'og:title',
-      content: 'Dynamic Open Graph title',
-    });
+    // this.title.setTitle('Dynamic Page Title');
+    // this.meta.updateTag({
+    //   name: 'description',
+    //   content: 'A brief and engaging description of your website content.',
+    // });
+    // this.meta.updateTag({
+    //   name: 'keywords',
+    //   content: 'keyword1, keyword2, keyword3, etc.',
+    // });
+    // this.meta.updateTag({
+    //   property: 'og:title',
+    //   content: 'Dynamic Open Graph title',
+    // });
 
     setTimeout(() => {
       this.images1 = [
