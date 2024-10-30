@@ -11,51 +11,40 @@
 .shifting-banner {
   height: 0;
   transition: height 2s ease;
-  /* Set a max-height that it will expand to, creating a shift */
-  max-height: 400px;
+  max-height: 800px;
 }
 
-/* CSS Animation to increase height after delay */
 .shifting-banner {
   animation: expandBanner 2s forwards 1s;
 }
 
-/* Define the animation for expanding */
 @keyframes expandBanner {
   to {
-    height: 400px;
-    /* Expand to the intended height, creating CLS */
+    height: 800px;
   }
 }
 
-/* Grid Images: initially smaller size, then expand to full size */
 .shifting-img {
   width: 100%;
   height: 0;
-  /* Start with zero height */
   transition: height 1.5s ease;
   animation: expandImage 2s forwards 1.5s;
-  /* Expand after a delay */
 }
 
 @keyframes expandImage {
   to {
-    height: 200px;
-    /* Expand to 200px height, creating a shift */
+    height: 400px;
   }
 }
 
-/* Shift card spacing by adding padding with delay */
 .shifting-card {
   padding: 0;
   transition: padding 1s ease;
   animation: addPadding 1s forwards 2s;
-  /* Delay padding */
 }
 
 @keyframes addPadding {
   to {
     padding: 15px;
-    /* Add padding dynamically, creating shift */
   }
 }
