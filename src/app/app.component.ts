@@ -1,6 +1,7 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { NgFor } from '@angular/common';
+import { Meta, Title } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-root',
@@ -9,7 +10,7 @@ import { NgFor } from '@angular/common';
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss',
 })
-export class AppComponent {
+export class AppComponent implements OnInit {
   placeholders = Array(8);
   images1: any;
 
@@ -24,7 +25,19 @@ export class AppComponent {
     { id: 8, src: '/images/8.png', alt: 'Image 8', caption: 'Caption 8' },
   ];
 
-  constructor() {
+  constructor(private meta: Meta, private title: Title) {}
+
+  ngOnInit(): void {
+    this.title.setTitle('Dynamic Page Title');
+    this.meta.updateTag({
+      name: 'description',
+      content: 'Dynamic page description',
+    });
+    this.meta.updateTag({
+      property: 'og:title',
+      content: 'Dynamic Open Graph title',
+    });
+
     setTimeout(() => {
       this.images1 = [
         { id: 1, src: '/images/1.avif', alt: 'Image 1', caption: 'Caption 1' },

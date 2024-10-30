@@ -10,46 +10,46 @@
 }
 
 // <!-- Without Optimized CSS -->
-.shifting-banner {
-  height: 0;
-  transition: height 2s ease;
-  max-height: 800px;
-}
+// .shifting-banner {
+//   height: 0;
+//   transition: height 2s ease;
+//   max-height: 800px;
+// }
 
-.shifting-banner {
-  animation: expandBanner 2s forwards 1s;
-}
+// .shifting-banner {
+//   animation: expandBanner 2s forwards 1s;
+// }
 
-@keyframes expandBanner {
-  to {
-    height: 800px;
-  }
-}
+// @keyframes expandBanner {
+//   to {
+//     height: 800px;
+//   }
+// }
 
-.shifting-img {
-  width: 100%;
-  height: 0;
-  transition: height 1.5s ease;
-  animation: expandImage 2s forwards 1.5s;
-}
+// .shifting-img {
+//   width: 100%;
+//   height: 0;
+//   transition: height 1.5s ease;
+//   animation: expandImage 2s forwards 1.5s;
+// }
 
-@keyframes expandImage {
-  to {
-    height: 400px;
-  }
-}
+// @keyframes expandImage {
+//   to {
+//     height: 400px;
+//   }
+// }
 
-.shifting-card {
-  padding: 0;
-  transition: padding 1s ease;
-  animation: addPadding 1s forwards 2s;
-}
+// .shifting-card {
+//   padding: 0;
+//   transition: padding 1s ease;
+//   animation: addPadding 1s forwards 2s;
+// }
 
-@keyframes addPadding {
-  to {
-    padding: 15px;
-  }
-}
+// @keyframes addPadding {
+//   to {
+//     padding: 15px;
+//   }
+// }
 
 
 /* Skeleton shimmer effect */
