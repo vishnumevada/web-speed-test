@@ -1,4 +1,4 @@
-<!-- <div class="banner">
+<div class="banner">
   <img src="/images/banner.avif" alt="Banner Image" class="img-fluid w-100" loading="eager">
 </div>
 
@@ -25,27 +25,6 @@
       </div>
     </div>
     }
-    }
-  </div>
-</div> -->
-
-
-<!-- Without Optimized Code -->
-<div class="banner">
-  <img src="/images/banner.png" alt="Banner Image" class="img-fluid w-100 shifting-banner">
-</div>
-
-<div class="container my-4">
-  <div class="row">
-    @for (image of images; track image.id) {
-    <div class="col-md-3 mb-2">
-      <div class="card shifting-card">
-        <img [src]="image.src" [alt]="image.alt" class="card-img-top shifting-img">
-        <div class="card-body">
-          <p class="card-text">{{ image.caption }}</p>
-        </div>
-      </div>
-    </div>
     }
   </div>
 </div>
